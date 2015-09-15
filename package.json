@@ -1,0 +1,26 @@
+{
+  "name": "frontend-assignment",
+  "version": "1.0.0",
+  "description": "Assignment for Frontend Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/multimediatechnology/assignment-frontend.git"
+  },
+  "keywords": [
+    "Frontend",
+    "Development",
+    "JavaScript",
+    "Node.js",
+    "Tooling"
+  ],
+  "author": "Hannes Moser <hannes@impossiblearts.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/multimediatechnology/assignment-frontend/issues"
+  },
+  "homepage": "https://github.com/multimediatechnology/assignment-frontend#readme"
+}
