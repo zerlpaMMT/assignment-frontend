@@ -1,0 +1,8 @@
+#!/usr/bin/env
+
+# create output directory
+mkdir -p ./dist
+
+# create favicons
+mkdir -p ./dist/icons
+npm run icons
