@@ -1,6 +1,9 @@
 # System
 .DS_Store
 
+# Logs
+*.log
+
 # IDE
 .idea/
 
@@ -9,5 +12,8 @@ dist/
 
 # Dependencies
 node_modules/
+
+# Process IDs
+*.pid
 
 # App
