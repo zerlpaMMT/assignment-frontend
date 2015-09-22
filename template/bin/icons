@@ -7,7 +7,8 @@ const favicons = require('favicons')
 const config = {
   files: {
     src: path.resolve('app/images/logo.png'),
-    dest: path.resolve('dist/icons')
+    dest: path.resolve('dist/icons'),
+    html: 'dist/index.html'
   },
   settings: {
     appName: pkg.name,
