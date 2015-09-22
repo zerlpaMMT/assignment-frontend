@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run init && npm run styles",
+    "init": "./bin/init",
+		"styles": "./bin/styles",
+		"watch": "./bin/watch",
+		"start": "npm run watch"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^3.3.3"
+  }
 }
