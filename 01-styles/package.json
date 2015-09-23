@@ -6,13 +6,17 @@
   "scripts": {
     "build": "npm run init && npm run styles",
     "init": "./bin/init",
-		"styles": "./bin/styles",
-		"watch": "./bin/watch",
-		"start": "npm run watch"
+    "styles": "./bin/styles",
+    "styles-lint": "./bin/styles-lint",
+    "test": "mocha",
+    "validate": "./bin/validate",
+    "watch": "./bin/watch",
+    "start": "npm run watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^3.3.3"
+    "node-sass": "^3.3.3",
+    "w3c-validate": "0.0.2"
   }
 }
