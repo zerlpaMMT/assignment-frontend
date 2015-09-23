@@ -8,8 +8,6 @@
     "init": "./bin/init",
     "styles": "./bin/styles",
     "styles-lint": "./bin/styles-lint",
-    "test": "mocha",
-    "validate": "./bin/validate",
     "watch": "./bin/watch",
     "start": "npm run watch"
   },
