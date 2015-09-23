@@ -1,4 +1,4 @@
-# frontend-01
+# 01-styles
 
 ## Setup
 
