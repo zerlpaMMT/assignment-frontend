@@ -4,4 +4,3 @@ import {
   pluralize,
   store
 } from './util'
-
