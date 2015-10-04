@@ -4,7 +4,7 @@
   "description": "Second assignment frontend development 1",
   "main": "index.js",
   "scripts": {
-    "browse": "open-cli http://localhost:8080",
+    "browse": "open http://localhost:8080",
     "server": "http-server ./modules",
     "start": "npm run server & npm run browse && grunt",
     "test": "true"
