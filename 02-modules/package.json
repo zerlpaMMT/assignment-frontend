@@ -4,7 +4,7 @@
   "description": "Second assignment frontend development 1",
   "main": "index.js",
   "scripts": {
-    "browse": "open http://localhost:8080",
+    "browse": "open-cli http://localhost:8080",
     "server": "http-server ./modules",
     "start": "npm run server & npm run browse && grunt",
     "test": "true"
@@ -26,5 +26,8 @@
     "time-grunt": "^1.2.1",
     "todomvc-app-css": "^2.0.1",
     "todomvc-common": "^1.0.2"
+  },
+  "dependencies": {
+    "open-cli": "^1.0.2"
   }
 }
