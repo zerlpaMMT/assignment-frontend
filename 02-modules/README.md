@@ -9,5 +9,5 @@ npm install
 ## Dev
 
 ```bash
-grunt
+npm start
 ```
