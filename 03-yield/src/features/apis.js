@@ -1,4 +1,4 @@
-export function es5() {
+export function es5(list, val) {
   function includes(arr, val) {
     if (arr.indexOf(val) !== -1) {
       return true
@@ -6,8 +6,7 @@ export function es5() {
     return false
   }
 
-  var a = [1, 2, 3, 4, 5]
-  return includes(a, 3)
+  return includes(list, val)
 }
 
 export function es6() {
