@@ -1,10 +1,11 @@
 import {
   es5,
   es6
-} from '../../src/features/classes'
+} from '../../src/features/apis'
 
 export default function() {
-  it.skip('should show prototype syntax in ES5', () => {
+  it('should return true for includes() in ES5', () => {
+    es5().should.eql(true)
   })
 
   it.skip('should show class syntax in ES6', () => {
