@@ -18,7 +18,7 @@ export default function() {
   })
 
   it.skip('should destructure object and sum up values in ES6', () => {
-    var d = es6()
+    const d = es6()
     d({
       x: 1,
       y: 2,
