@@ -4,9 +4,29 @@ import {
 } from '../../src/features/destructuring'
 
 export default function() {
-  it.skip('should show prototype syntax in ES5', () => {
+  it('should destructure object and sum up values in ES5', () => {
+    var d = es5()
+    d({
+      x: 1,
+      y: 2,
+      z: 3
+    }).should.eql(6)
+    d({
+      x: 1,
+      y: 2
+    }).should.eql(3)
   })
 
-  it.skip('should show class syntax in ES6', () => {
+  it.skip('should destructure object and sum up values in ES6', () => {
+    var d = es6()
+    d({
+      x: 1,
+      y: 2,
+      z: 3
+    }).should.eql(6)
+    d({
+      x: 1,
+      y: 2
+    }).should.eql(3)
   })
 }
