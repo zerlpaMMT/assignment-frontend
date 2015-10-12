@@ -4,7 +4,8 @@ import {
 } from '../../src/features/classes'
 
 export default function() {
-  it.skip('should show prototype syntax in ES5', () => {
+  it('should say Hello, World! in ES5', () => {
+    es5('World!').should.eql('World!')
   })
 
   it.skip('should show class syntax in ES6', () => {
