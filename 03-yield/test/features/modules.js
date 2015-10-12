@@ -1,7 +1,7 @@
 import {
   es5,
   es6
-} from '../../src/features/classes'
+} from '../../src/features/modules'
 
 export default function() {
   it.skip('should show prototype syntax in ES5', () => {
