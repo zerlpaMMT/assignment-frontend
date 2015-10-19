@@ -15,7 +15,6 @@ import reflectApi from './features/reflect-api'
 import subclassableBuiltins from './features/subclassable-builtins'
 import symbols from './features/symbols'
 import templateStrings from './features/template-strings'
-import unicode from './features/unicode'
 
 describe('lib', () => {
 
@@ -36,6 +35,5 @@ describe('lib', () => {
   describe('subclassable-builtins', subclassableBuiltins)
   describe('symbols', symbols)
   describe('template-strings', templateStrings)
-  describe('unicode', unicode)
 
 })
