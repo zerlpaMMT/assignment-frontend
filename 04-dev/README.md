@@ -1,4 +1,4 @@
-# 03-yield
+# 04-dev
 
 ## Setup
 
@@ -9,5 +9,6 @@ npm install
 ## Dev
 
 ```bash
-npm test
+grunt
 ```
+
