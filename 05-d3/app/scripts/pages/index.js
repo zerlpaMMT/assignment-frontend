@@ -25,58 +25,66 @@ function draw(data) {
   const height = 600
   const format = d3.format('d')
   const svg = d3.select('#chart')
-  const x = d3.scale.linear().range([0, width])
-  const y = d3.scale.ordinal().rangeRoundBands([0, height], 0.1)
-  const xAxis = d3.svg.axis().scale(x).orient('bottom').ticks(5).tickFormat(format)
+  const x = d3.scale.ordinal().rangeRoundBands([0, width], 0.1)
+  const y = d3.scale.linear().range([height, 0])
+  const xAxis = d3.svg
+    .axis()
+    .scale(x)
+    .orient('bottom')
+    .ticks(10)
+    .tickFormat(format)
 
   if (!(data instanceof Array)) {
     return
   }
 
-  x.domain([
+  x.domain(data.map(function(d) {
+    return d.name
+  }))
+  y.domain([
     0, d3.max(data, function(d) {
-      return d.count
+      return d.age
     })
   ])
-  y.domain(data.map(function(d) {
-    return d.node
-  }))
 
-  svg.select('.axis.x').call(xAxis)
+  svg
+    .select('.axis.x')
+    .call(xAxis)
 
-  const chart = svg.select('.rects').selectAll('rect')
+  const chart = svg
+    .select('.rects')
+    .selectAll('rect')
     .data(data)
     .enter()
     .append('g')
 
   chart.append('rect')
     .attr('class', 'bar')
+    .attr('x', function(d) {
+      return x(d.name)
+    })
     .attr('y', function(d) {
-      return y(d.name)
+      return y(d.age)
     })
-    .attr('height', y.rangeBand())
-    .attr('x', function() {
-      return 0
-    })
-    .attr('width', function(d) {
-      return x(d.age)
+    .attr('width', x.rangeBand())
+    .attr('height', function(d) {
+      return height - y(d.age)
     })
 
   chart.append('text')
-    .attr('x', function(d) {
+    .attr('y', function(d) {
       if (width - x(d.age) > width / 5 * 3) {
         return width
       }
-      return x(d.age)
+      return y(d.age)
     })
-    .attr('y', function(d) {
-      return y(d.age) + y.rangeBand() / 2
+    .attr('x', function(d) {
+      return x(d.name) + x.rangeBand() / 2
     })
     .attr('dx', '-0.35em')
     .attr('dy', '0.35em')
     .text(function(d) {
-      const name = d.name
-      return name + ' ' + d.age
+      return `${d.name}`
     })
 }
 
@@ -91,16 +99,19 @@ export function drivers() {
     })
     .then(data => {
       content.innerHTML = tplDrivers({
+        viewBox: '0 0 800 600',
+        transformG: 'translate(0, 0)',
+        transformX: 'translate(0, 600)',
         drivers: data.MRData.DriverTable.Drivers
       })
-      const drivers = driversByAge(data.MRData.DriverTable.Drivers)
-      draw(drivers)
+      draw(
+        driversByAge(data.MRData.DriverTable.Drivers)
+      )
     })
     .catch(err => {
       globalError = err
       page('/error')
     })
-  content.innerHTML = tplDrivers()
 }
 
 export function notFound() {
