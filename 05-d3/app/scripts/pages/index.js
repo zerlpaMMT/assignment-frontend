@@ -20,9 +20,7 @@ function driversByAge(drivers) {
   })
 }
 
-function draw(data) {
-  const width = 800
-  const height = 600
+function draw(data, width = 800, height = 400) {
   const format = d3.format('d')
   const svg = d3.select('#chart')
   const x = d3.scale.ordinal().rangeRoundBands([0, width], 0.1)
@@ -94,18 +92,21 @@ export function drivers() {
       if (response.status >= 400) {
         return page('error')
       }
-
       return response.json()
     })
     .then(data => {
+      const width = 800
+      const height = 300
       content.innerHTML = tplDrivers({
-        viewBox: '0 0 800 600',
+        viewBox: `0 0 ${width} ${height}`,
         transformG: 'translate(0, 0)',
-        transformX: 'translate(0, 600)',
+        transformX: `translate(0, ${height})`,
         drivers: data.MRData.DriverTable.Drivers
       })
       draw(
-        driversByAge(data.MRData.DriverTable.Drivers)
+        driversByAge(data.MRData.DriverTable.Drivers),
+        width,
+        height
       )
     })
     .catch(err => {
