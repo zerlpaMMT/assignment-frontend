@@ -1,4 +1,4 @@
-# 04-dev
+# 06-diagrams
 
 ## Setup
 
