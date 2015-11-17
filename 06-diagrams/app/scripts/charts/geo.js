@@ -18,7 +18,7 @@ function draw(chartId, data, width, height) {
     .enter()
     .append('path')
     .attr('d', path)
-    .style('fill', function(d) {
+    .style('fill', function() {
       return '#' + Math.floor(Math.random() * 16777215).toString(16)
     })
 
