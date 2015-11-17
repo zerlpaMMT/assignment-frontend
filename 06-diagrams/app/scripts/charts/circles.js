@@ -1,6 +1,6 @@
 import d3 from 'd3'
 import uuid from 'uuid'
-import tpl from '../templates/circles.hbs'
+import tpl from '../templates/d3.hbs'
 
 function draw(id) {
   const svg = d3.select(`#${id}`)
@@ -28,7 +28,7 @@ function draw(id) {
       .attr('x', 0)
       .attr('y', 0)
       .attr('dy', '1em')
-      .text('Hallo Alexander Gabriel')
+      .text('Hallo Bachelor & Master Studierende')
 
 }
 

@@ -1,6 +1,6 @@
 import d3 from 'd3'
 import uuid from 'uuid'
-import tpl from '../templates/barchart.hbs'
+import tpl from '../templates/d3.hbs'
 
 function draw(chartId, data, width, height, margin) {
   const svg = d3.select(`#${chartId}`)
