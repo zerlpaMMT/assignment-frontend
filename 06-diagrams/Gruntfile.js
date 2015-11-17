@@ -54,7 +54,7 @@ module.exports = function(grunt) {
             options.base.forEach(function(base) {
               middlewares.push(serveStatic(base))
             })
-            middlewares.push(serveStatic(directory))
+            //middlewares.push(serveStatic(directory))
             middlewares.push(function(req, res) {
               for (let file, i = 0; i < options.base.length; i++) {
                 file = options.base + "/index.html"
@@ -85,6 +85,12 @@ module.exports = function(grunt) {
             expand: true,
             cwd: '<%= config.app %>',
             src: ['**/*.html'],
+            dest: '<%= config.dist %>'
+          },
+          {
+            expand: true,
+            cwd: '<%= config.app %>',
+            src: ['styles/**/*.css'],
             dest: '<%= config.dist %>'
           },
           {
@@ -153,15 +159,12 @@ module.exports = function(grunt) {
 
   })
 
-  grunt.registerTask('build', [
-    'eslint',
-    'clean',
-    'copy',
-    'less',
-    'browserify',
-  ])
   grunt.registerTask('default', [
-      'build',
+      'eslint',
+      'clean',
+      'copy',
+      'less',
+      'browserify',
       'connect',
       'watch'
     ]
