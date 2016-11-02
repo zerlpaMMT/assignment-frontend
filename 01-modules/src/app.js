@@ -1,5 +1,5 @@
 export function valid(email) {
-  return false
+
 }
 
 export function degreeProgram(email) {
