@@ -1,4 +1,4 @@
-# 06-diagrams
+# 01-modules
 
 ## Setup
 
@@ -9,6 +9,5 @@ npm install
 ## Dev
 
 ```bash
-grunt
+npm start
 ```
-
