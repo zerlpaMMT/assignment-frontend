@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     browserify: {
       dist: {
         files: {
-          'modules/js/app.js': ['src/**/*.js']
+          'dist/app.js': ['src/**/*.js']
         },
         options: {
           transform: ['babelify']
@@ -20,12 +20,6 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      livereload: {
-        options: {
-          livereload: true
-        },
-        files: ['modules/js/**/*.js']
-      },
       js: {
         files: ['src/**/*.js'],
         tasks: ['browserify']
