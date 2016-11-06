@@ -14,5 +14,5 @@ export function graduationYear(email) {
 	var degreeLevel = level(email);
 	var joint = email.split(".")[1].split("-")[1].toUpperCase().substring(1,5);
 
-	return (degreeLevel == "BA" ? Number(joint)+3 : joint+2);
+	return (degreeLevel == "BA" ? Number(joint)+3 : Number(joint)+2);
 }
