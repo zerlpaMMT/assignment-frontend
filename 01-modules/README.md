@@ -1,6 +1,6 @@
 # 01-modules
 
-## TODO
+## Assignment
 
 * Implement function by function (start with `#valid()`)
 * Open `test/index.js` and remove `.skip` at the specific test
