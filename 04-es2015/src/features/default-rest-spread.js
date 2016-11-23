@@ -36,4 +36,13 @@ export function es5() {
 }
 
 export function es6() {
+
+  return {
+    defaults: (x=12)=>{return x;},
+    rest: (...arr)=>{return arr.join(',');},
+    spread: (arr)=>{
+      let [x=0,y=0,z=0] = arr;
+      return x+y+z;
+    },
+  }
 }

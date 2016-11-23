@@ -39,5 +39,8 @@ export function es5() {
 }
 
 export function es6() {
-  // Just implement the test!
+  return ({
+    MySet: () => { return new Set(); },
+    MyMap: () => { return new Map(); },
+  })
 }
