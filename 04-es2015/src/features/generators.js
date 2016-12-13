@@ -18,7 +18,7 @@ export function es5(n) {
 export function es6(n) {
   function* counter(n) {
     let cnt = 0
-    if (cnt++ < n) {
+    while(cnt++ < n) {
       yield cnt
     }
   }
