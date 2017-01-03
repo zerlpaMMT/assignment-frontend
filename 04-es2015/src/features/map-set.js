@@ -39,8 +39,4 @@ export function es5() {
 }
 
 export function es6() {
-  return ({
-    MySet: () => { return new Set(); },
-    MyMap: () => { return new Map(); },
-  })
 }
