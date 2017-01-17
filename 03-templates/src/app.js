@@ -17,7 +17,6 @@ function contact() {
 }
 
 function players(ctx) {
-<<<<<<< HEAD
   const players = {
     'sergey': {
       name: "Sergey",
@@ -31,18 +30,6 @@ function players(ctx) {
   }
 
   $app.html(player(players[ctx.params.player]))
-=======
-  let tpl = () => {}
-  switch (ctx.params.player) {
-    case 'magnus':
-      tpl = magnusTpl
-      break;
-    case 'sergey':
-      tpl = sergeyTpl
-      break;
-  }
-  $app.html(tpl())
->>>>>>> upstream/master
 }
 
 function notFound() {
